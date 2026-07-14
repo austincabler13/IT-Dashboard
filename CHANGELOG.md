@@ -1,9 +1,17 @@
 # Changelog
 
-All notable project changes will be recorded here once development begins.
+All notable changes to IT Dashboard will be recorded in this file.
 
-## Unreleased
+## [0.1.0] - 2026-07-14
 
-- Created the initial repository structure.
-- Added project mission and design principles.
-- Added starter documentation.
+### Added
+
+- Initial repository structure.
+- Project mission and design principles.
+- Starter project documentation.
+- Initial Python backend structure.
+- PyWebView desktop window.
+- Local HTML frontend.
+- Basic application entry point.
+- Apache License 2.0.
+- Python dependency requirements.
