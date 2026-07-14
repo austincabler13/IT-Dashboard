@@ -1,5 +1,5 @@
 async function sayHello() {
-    const message = await pywebview.api.say_hello();
+    const message = await pywebview.api.Say_Hello();
     document.getElementById("Message").textContent = message;
 }
 
