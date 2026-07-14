@@ -1,3 +1,8 @@
-const message = await pywebview.api.say_hello();
+async function sayHello() {
+    const message = await pywebview.api.say_hello();
+    document.getElementById("Message").textContent = message;
+}
 
-document.getElementById("Message").innerHTML = message;
+document
+    .getElementById("MessageButton")
+    .addEventListener("click", sayHello);
