@@ -37,6 +37,28 @@ Developers can extend the platform.
 - Settings
 - Plugins
 
+## Running the Project
+
+### Requirements
+
+- Windows
+- Python
+- PyWebView
+
+### Setup
+
+Install the required Python dependency:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Run the application from the repository root:
+
+```bash
+python src/backend/main.py
+```
+
 ## Documentation
 
 Project planning and technical documentation will be stored in the [`docs`](docs/) directory.
@@ -47,4 +69,4 @@ Contribution guidelines will be developed as the project foundation becomes more
 
 ## License
 
-A license has not yet been selected.
+IT Dashboard is licensed under the Apache License 2.0. See [LICENSE](LICENSE).
