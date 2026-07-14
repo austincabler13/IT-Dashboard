@@ -6,23 +6,6 @@ IT Dashboard is my open-source IT hub that brings system monitoring, diagnostics
 
 IT Dashboard is currently in the planning and early-development stage. Features, architecture, and documentation may change as the project develops.
 
-## Design Principles
-
-### Centralized
-IT tools should be accessible from one workspace.
-
-### Modular
-Features should be expandable through plugins.
-
-### User-Friendly
-Beginners should understand it, while professionals can access advanced tools.
-
-### Performance-Focused
-Only load and update what the user needs. Performance should be considered whenever a new feature is designed.
-
-### Community-Driven
-Developers can extend the platform.
-
 ## Planned Areas
 
 - Dashboard
