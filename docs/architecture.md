@@ -1,0 +1,1 @@
+### The frontend never talks directly to hardware modules. All requests go through the API layer.
