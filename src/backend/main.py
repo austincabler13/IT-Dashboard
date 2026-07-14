@@ -1,4 +1,4 @@
 if __name__=="__main__":
-    from backend import window
-    window.create()
+    import window
     print("Starting IT Dashboard...")
+    window.create()
