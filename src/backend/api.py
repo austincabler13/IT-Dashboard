@@ -1,3 +1,3 @@
 class API:
-    def Say_Hello(self):
+    def say_hello(self):
         return "Hello from Python! - Test"
