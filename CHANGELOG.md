@@ -16,7 +16,7 @@ All notable changes to IT Dashboard will be recorded in this file.
 - improved frontend layout
 - updated the dashboard to support Future Expansion
 
-### technical
+### Technical
 - Added frontend API Communication with System Data
 - First Dashboard card layout
 - Improved Architecture for future Modules
