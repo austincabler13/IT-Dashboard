@@ -21,6 +21,66 @@ async function loadSystemInfo() {
     }
 }
 
-document
-    .getElementById("RefreshButton")
-    .addEventListener("click", loadSystemInfo);
+async function loadhardwareInfo() {
+    const messageElement = document.getElementById("status");
+
+    try {
+        const hardwareInfo = await pywebview.api.get_hardware_info();
+        document.getElementById("cpu_name").textContent = hardwareInfo.cpu_name;
+        document.getElementById("physical_cores").textContent = hardwareInfo.physical_cores;
+        document.getElementById("logical_processors").textContent = hardwareInfo.logical_processors;
+        document.getElementById("total_memory").textContent = hardwareInfo.total_memory;
+        messageElement.textContent = "Hardware info loaded successfully";
+        setTimeout(() => {
+            messageElement.textContent = "";
+        }, 3000);
+    } catch (error) {
+        console.error("Unable to contact backend:", error);
+        messageElement.textContent = "unable to contact backend";
+        setTimeout(() => {
+            messageElement.textContent = "";
+        }, 3000);
+    }
+}
+
+async function loadhardwareInfo() {
+    const messageElement = document.getElementById("status");
+
+    try {
+        const hardwareInfo = await window.pywebview.api.get_hardware_info();
+        document.getElementById("cpu_name").textContent = hardwareInfo.cpu_name;
+        document.getElementById("physical_cores").textContent = hardwareInfo.physical_cores;
+        document.getElementById("logical_processors").textContent = hardwareInfo.logical_processors;
+        document.getElementById("total_memory").textContent = hardwareInfo.total_memory;
+        messageElement.textContent = "Hardware info loaded successfully";
+        setTimeout(() => {
+            messageElement.textContent = "";
+        }, 3000);
+    } catch (error) {
+        console.error("Unable to contact backend:", error);
+        messageElement.textContent = "unable to contact backend";
+        setTimeout(() => {
+            messageElement.textContent = "";
+        }, 3000);
+    }
+}
+
+async function loadInfo() {
+    setInterval(loadSystemInfo, 1000);
+    setInterval(loadhardwareInfo, 1000);
+
+    await loadSystemInfo();
+    await loadhardwareInfo();
+}
+
+function startDashboard() {
+    if (window.pywebview && window.pywebview.api) {
+        loadInfo();
+    } else {
+        window.addEventListener("pywebviewready", () => {
+            loadInfo();
+        }, { once: true });
+    }
+}
+
+window.addEventListener("DOMContentLoaded", startDashboard);
