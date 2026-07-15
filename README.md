@@ -6,6 +6,10 @@ IT Dashboard is my open-source IT hub that brings system monitoring, diagnostics
 
 IT Dashboard is currently in the planning and early-development stage. Features, architecture, and documentation may change as the project develops.
 
+## Screenshots
+
+![IT Dashboard v0.3.0](docs/images/image1.png)
+
 ## Planned Areas
 
 - Dashboard
