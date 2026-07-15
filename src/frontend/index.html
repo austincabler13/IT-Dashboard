@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h1>IT Dashboard</h1>
-    <h3>Active Development</h3>
-
-    <button id="MessageButton">Hello Test</button>
+   <div class="card">
+    <h4>System Overview</h4>
     
-    <p id="Message"></p>
-    <sub>Version 0.2.0</sub>
+    <p>Operating System: <span id="os"></span></p>
+
+    <p>Computer Name: <span id="computer_name"></span></p>
+
+    <p>Bitness: <span id="bitness"></span></p>
+
+    <p>Architecture: <span id="architecture"></span></p>
+
+    <p>Python Version: <span id="python_version"></span></p>
+    </div>
+    <button id="RefreshButton">Refresh</button>
+    <p id="status"></p>
+    <sub>Version 0.3.0</sub>
 
     <script src="js/app.js"></script>
 </body>

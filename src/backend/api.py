@@ -2,17 +2,15 @@ import platform
 
 
 class API:
-    def say_hello(self):
-        return "Hello from Python! - Test"
+    def get_system_info(self):
+        return {
+            "os": platform.system(),
+            "computer_name": platform.node(),
+            "bitness": platform.architecture()[0],
+            "architecture": platform.machine(),
+            "python_version": platform.python_version()
+        }
 
-    def get_os_info(self):
-        return platform.system()
-
-    def get_computer_name_info(self):
-        return platform.node
-
-    def get_architecture_info(self):
-        return platform.architecture()[0]
-
-    def get_python_info(self):
-        return platform.python_version()
+if __name__ == "__main__":
+    api = API()
+    print(api.get_system_info())

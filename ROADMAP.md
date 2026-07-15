@@ -12,11 +12,11 @@ This roadmap outlines the current development direction for IT Dashboard. Items 
 
 ## v0.3.0 — System Information Foundation
 
-- [ ] Add a backend system-information module.
-- [ ] Return structured system information through the API layer.
-- [ ] Display operating-system, computer-name, architecture, Python-version, and application-version information.
-- [ ] Create the first reusable dashboard information card.
-- [ ] create basic CSS
+- [x] Add a backend system-information module.
+- [x] Return structured system information through the API layer.
+- [x] Display operating-system, computer-name, architecture, Python-version, and application-version information.
+- [x] Create the first reusable dashboard information card.
+- [x] create basic CSS
 
 ## Phase 2 — Core Features
 
