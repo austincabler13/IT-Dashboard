@@ -12,28 +12,23 @@ All notable changes to IT Dashboard will be recorded in this file.
 
 ### Changed
 
-- changed hello tests into real data
-- improved frontend layout
-- updated the dashboard to support Future Expansion
+- Changed hello tests into real data
+- Improved frontend layout
 
 ### Technical
-- Added frontend API Communication with System Data
-- First Dashboard card layout
-- Improved Architecture for future Modules
+- Improved architecture for future modules
 
 ## [0.2.1] - 2026-07-14
 
 ### Added
 
-- Initial frontend-to-backend communication through PyWebView.
-- JavaScript button event handling.
-- First exposed Python API method.
-- Dynamic frontend text updates using backend responses.
-- Basic frontend error handling for failed backend calls.
+- Error handling
 
 ### Changed
 
-- Standardized the first API method to Python snake_case naming.
+- Naming have been fixed and improved
+- entry point cleanup and improvements
+- doc improvements
 
 
 

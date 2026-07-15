@@ -48,7 +48,7 @@ Project planning and technical documentation will be stored in the [`docs`](docs
 
 ## Contributing
 
-Contribution guidelines will be developed as the project foundation becomes more stable.
+Contributions are welcome while IT Dashboard is in early development. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines and information.
 
 ## License
 
