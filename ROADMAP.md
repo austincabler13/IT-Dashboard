@@ -16,6 +16,7 @@ This roadmap outlines the current development direction for IT Dashboard. Items 
 - [ ] Return structured system information through the API layer.
 - [ ] Display operating-system, computer-name, architecture, Python-version, and application-version information.
 - [ ] Create the first reusable dashboard information card.
+- [ ] create basic CSS
 
 ## Phase 2 — Core Features
 
