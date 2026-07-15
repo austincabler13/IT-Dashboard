@@ -8,9 +8,10 @@ async function loadSystemInfo() {
         document.getElementById("bitness").textContent = systemInfo.bitness;
         document.getElementById("architecture").textContent = systemInfo.architecture;
         document.getElementById("python_version").textContent = systemInfo.python_version;
+        messageElement.textContent = "System info loaded successfully";
     } catch (error) {
         console.error("Unable to contact backend:", error);
-        messageElement.textContent = "System information updated.";
+        messageElement.textContent = "unable to contact backend";
     }
 }
 
