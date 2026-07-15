@@ -13,7 +13,7 @@ body {
     margin-bottom: 20px;
 }
 
-.card h4 {
+.card h2 {
     margin-top: 0;
 }
 
@@ -21,7 +21,7 @@ body {
     margin: 5px 0;
 }
 
-h1, h4 {
+h1, h2 {
     color: #333333;
     font-weight: bold;
 }

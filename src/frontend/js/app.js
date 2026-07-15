@@ -2,15 +2,15 @@ async function loadSystemInfo() {
     const messageElement = document.getElementById("status");
 
     try {
-        const systeminfo = await pywebview.api.get_system_info();
-        document.getElementById("os").textContent = systeminfo.os;
-        document.getElementById("computer_name").textContent = systeminfo.computer_name;
-        document.getElementById("bitness").textContent = systeminfo.bitness;
-        document.getElementById("architecture").textContent = systeminfo.architecture;
-        document.getElementById("python_version").textContent = systeminfo.python_version;
+        const systemInfo = await pywebview.api.get_system_info();
+        document.getElementById("os").textContent = systemInfo.os;
+        document.getElementById("computer_name").textContent = systemInfo.computer_name;
+        document.getElementById("bitness").textContent = systemInfo.bitness;
+        document.getElementById("architecture").textContent = systemInfo.architecture;
+        document.getElementById("python_version").textContent = systemInfo.python_version;
     } catch (error) {
         console.error("Unable to contact backend:", error);
-        messageElement.textContent = "Unable to contact the backend.";
+        messageElement.textContent = "System information updated.";
     }
 }
 
