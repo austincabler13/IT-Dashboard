@@ -15,7 +15,7 @@ All notable changes to IT Dashboard will be recorded in this file.
 - added improvements with logging
 - improved some documentation
 
-# [0.3.2] - 2026-07-15
+# [0.3.0] - 2026-07-15
 
 ## added / changed
 
