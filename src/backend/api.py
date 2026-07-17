@@ -4,11 +4,6 @@ from utils.formatters import format_percent, format_bytes
 
 
 class API:
-    def __init__(self):
-        psutil.cpu_percent(interval=None)
-        pass
-        
-
     def get_system_info(self):
         return {
             "os": platform.system(),

@@ -22,7 +22,7 @@ async function loadSystemInfo() {
 }
 
 
-async function loadhardwareInfo() {
+async function loadHardwareInfo() {
     const messageElement = document.getElementById("status");
 
     try {
@@ -44,7 +44,7 @@ async function loadhardwareInfo() {
     }
 }
 
-async function loadperformanceInfo() {
+async function loadPerformanceInfo() {
     const messageElement = document.getElementById("status");
 
     try {
@@ -59,18 +59,15 @@ async function loadperformanceInfo() {
     } catch (error) {
         console.error("Unable to contact backend:", error);
         messageElement.textContent = "unable to contact backend";
-        setTimeout(() => {
-            messageElement.textContent = "";
-        }, 3000);
     }
 }
 
 async function loadInfo() {
     await loadSystemInfo();
-    await loadhardwareInfo();
-    await loadperformanceInfo();
+    await loadHardwareInfo();
+    await loadPerformanceInfo();
 
-    setInterval(loadperformanceInfo, 1000);
+    setInterval(loadPerformanceInfo, 1000);
 }
 
 function startDashboard() {

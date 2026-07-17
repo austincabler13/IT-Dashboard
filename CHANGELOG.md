@@ -17,11 +17,11 @@ All notable changes to IT Dashboard will be recorded in this file.
 
 ### Technical
 
-- Bytes formatting
-- percent Formatting
-- added improvements backend Architecture
-- improved Organization
-- refactored API methods
+
+- Added reusable byte and percentage formatter utilities
+- Moved display formatting into the backend utility module
+- Added a one-second performance polling interval
+- Corrected API method organization
 
 
 
