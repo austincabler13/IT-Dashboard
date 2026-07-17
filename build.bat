@@ -8,7 +8,7 @@ if exist dist rmdir /s /q dist
 if exist "IT Dashboard.spec" del /q "IT Dashboard.spec"
 
 echo.
-echo Building IT Dashboard with project virtual environment...
+echo Building IT Dashboard...
 
 ".venv\Scripts\python.exe" -m PyInstaller ^
     --noconfirm ^
@@ -16,8 +16,6 @@ echo Building IT Dashboard with project virtual environment...
     --name "IT Dashboard" ^
     --windowed ^
     --add-data "src/frontend;frontend" ^
-    --collect-all pythonnet ^
-    --collect-submodules clr_loader ^
     src/backend/main.py
 
 if errorlevel 1 (

@@ -30,4 +30,4 @@ def create():
         height=600
     )
 
-    webview.start()
+    webview.start(gui="edgechromium")
