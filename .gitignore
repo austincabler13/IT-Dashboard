@@ -11,3 +11,7 @@ venv/
 
 # vscode settings
 .vscode/
+
+build/
+dist/
+*.spec

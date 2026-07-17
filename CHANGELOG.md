@@ -2,6 +2,22 @@
 
 All notable changes to IT Dashboard will be recorded in this file.
 
+# IT Dashboard v0.4.1 (Pre-release)
+
+## Added
+- First experimental Windows executable.
+- PyInstaller packaging support.
+- Build script (`build.bat`) for creating Windows builds.
+
+## Changed
+- Improved frontend path handling for packaged builds.
+
+## Notes
+- This is an experimental pre-release.
+- Download the Windows ZIP and extract the entire folder before running `IT Dashboard.exe`.
+
+
+
 # [0.4.0] - 2026-07-17
 
 ### Added

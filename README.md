@@ -6,6 +6,12 @@ IT Dashboard is my open-source IT hub that brings system monitoring, diagnostics
 
 IT Dashboard is currently in the planning and early-development stage. Features, architecture, and documentation may change as the project develops.
 
+## Downloads
+
+The latest Windows build is available on the GitHub Releases page.
+
+> Note: v0.4.1 is an experimental Windows build.
+
 ## Screenshots
 
 ![IT Dashboard v0.3.0](docs/images/image1.png)
