@@ -44,16 +44,15 @@ async function loadhardwareInfo() {
     }
 }
 
-async function loadhardwareInfo() {
+async function loadperformanceInfo() {
     const messageElement = document.getElementById("status");
 
     try {
-        const hardwareInfo = await window.pywebview.api.get_hardware_info();
-        document.getElementById("cpu_name").textContent = hardwareInfo.cpu_name;
-        document.getElementById("physical_cores").textContent = hardwareInfo.physical_cores;
-        document.getElementById("logical_processors").textContent = hardwareInfo.logical_processors;
-        document.getElementById("total_memory").textContent = hardwareInfo.total_memory;
-        messageElement.textContent = "Hardware info loaded successfully";
+        const performanceInfo = await window.pywebview.api.get_performance_info();
+        document.getElementById("cpu_percent").textContent = performanceInfo.cpu_percent;
+        document.getElementById("memory_percent").textContent = performanceInfo.memory_percent;
+        document.getElementById("memory_used").textContent = performanceInfo.memory_used;
+        document.getElementById("memory_total").textContent = performanceInfo.memory_total;
         setTimeout(() => {
             messageElement.textContent = "";
         }, 3000);
@@ -69,6 +68,9 @@ async function loadhardwareInfo() {
 async function loadInfo() {
     await loadSystemInfo();
     await loadhardwareInfo();
+    await loadperformanceInfo();
+
+    setInterval(loadperformanceInfo, 1000);
 }
 
 function startDashboard() {

@@ -20,8 +20,8 @@ This roadmap outlines the current development direction for IT Dashboard. Items 
 
 ## Phase 2 — Core Features
 
-- [ ] Hardware information.
-- [ ] Performance monitoring.
+- [x] Hardware information.
+- [x] Performance monitoring.
 - [ ] Network information.
 - [ ] Storage information.
 - [ ] Services and event-log exploration.

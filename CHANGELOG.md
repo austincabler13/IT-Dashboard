@@ -2,6 +2,29 @@
 
 All notable changes to IT Dashboard will be recorded in this file.
 
+# [0.4.0] - 2026-07-17
+
+### Added
+
+- Performance information
+- Hardware information
+- Live information Monitoring
+
+### Changed
+
+- improved API organization
+- improved project documentation
+
+### Technical
+
+- Bytes formatting
+- percent Formatting
+- added improvements backend Architecture
+- improved Organization
+- refactored API methods
+
+
+
 # [0.3.2] - 2026-07-15
 
 ### Added
@@ -14,12 +37,6 @@ All notable changes to IT Dashboard will be recorded in this file.
 
 - added improvements with logging
 - improved some documentation
-
-# [0.3.0] - 2026-07-15
-
-## added / changed
-
-- Polished documentation, styling, code fixes, UI, etc. (Same as 0.3.2)
 
 
 ## [0.3.0] - 2026-07-15
