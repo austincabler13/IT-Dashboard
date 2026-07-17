@@ -21,6 +21,7 @@ async function loadSystemInfo() {
     }
 }
 
+
 async function loadhardwareInfo() {
     const messageElement = document.getElementById("status");
 
@@ -66,9 +67,6 @@ async function loadhardwareInfo() {
 }
 
 async function loadInfo() {
-    setInterval(loadSystemInfo, 1000);
-    setInterval(loadhardwareInfo, 1000);
-
     await loadSystemInfo();
     await loadhardwareInfo();
 }

@@ -1,14 +1,15 @@
 import platform
 import psutil
+from utils.formatters import format_bytes
 
 
 class API:
     def __init__(self):
 
-        psutil.cpu_percent(interval=None)
+        
 
-    def get_system_info(self):
-        return {
+        def get_system_info(self):
+            return {
             "os": platform.system(),
             "computer_name": platform.node(),
             "bitness": platform.architecture()[0],
@@ -21,7 +22,7 @@ class API:
             "cpu_name": platform.processor(),
             "physical_cores": psutil.cpu_count(logical=False),
             "logical_processors": psutil.cpu_count(logical=True),
-            "total_memory": psutil.virtual_memory().total,
+            "total_memory": format_bytes(psutil.virtual_memory().total)
         }
 
     def get_performance_info(self):
