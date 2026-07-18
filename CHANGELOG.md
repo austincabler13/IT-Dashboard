@@ -2,6 +2,29 @@
 
 All notable changes to IT Dashboard will be recorded in this file.
 
+
+## [0.5.0] - 2026-07-17
+
+### Added
+- Storage Information module.
+- Detection of all available storage devices.
+- Drive letter information.
+- Mount point information.
+- File system information.
+- Total storage capacity.
+- Used storage space.
+- Free storage space.
+- Storage usage percentage.
+
+### Changed
+- Improved backend API structure.
+- Expanded frontend dashboard with a Storage Information card.
+- Continued improvements to the overall dashboard architecture.
+
+### Fixed
+- Various stability and packaging improvements.
+
+
 # IT Dashboard v0.4.1 (Pre-release)
 
 ## Added

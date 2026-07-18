@@ -62,12 +62,72 @@ async function loadPerformanceInfo() {
     }
 }
 
+async function loadStorageInfo() {
+    const messageElement = document.getElementById("status");
+    const storageContainer = document.getElementById("storage_drives");
+
+    try {
+        const storageInfo =
+            await window.pywebview.api.get_storage_info();
+
+        storageContainer.replaceChildren();
+
+        for (const drive of storageInfo.drives) {
+            const driveElement = document.createElement("div");
+            driveElement.className = "storage-drive";
+
+            const heading = document.createElement("h3");
+            heading.textContent = drive.drive_letter;
+
+            const mountPoint = document.createElement("p");
+            mountPoint.textContent = `Drive: ${drive.mount_point}`;
+
+            const fileSystem = document.createElement("p");
+            fileSystem.textContent = `File System: ${drive.file_system}`;
+
+            const driveUsage = document.createElement("p");
+            driveUsage.textContent = `Usage: ${drive.drive_usage}`;
+
+            const totalSpace = document.createElement("p");
+            totalSpace.textContent = `Total: ${drive.total_space}`;
+
+            const usedSpace = document.createElement("p");
+            usedSpace.textContent = `Used: ${drive.used_space}`;
+
+            const freeSpace = document.createElement("p");
+            freeSpace.textContent = `Free: ${drive.free_space}`;
+
+            driveElement.append(
+                heading,
+                mountPoint,
+                fileSystem,
+                driveUsage,
+                totalSpace,
+                usedSpace,
+                freeSpace
+            );
+
+            storageContainer.appendChild(driveElement);
+        }
+    } catch (error) {
+        console.error("Unable to load storage information:", error);
+        messageElement.textContent =
+            "Unable to load storage information";
+
+        setTimeout(() => {
+            messageElement.textContent = "";
+        }, 3000);
+    }
+}
+
 async function loadInfo() {
     await loadSystemInfo();
     await loadHardwareInfo();
     await loadPerformanceInfo();
+    await loadStorageInfo();
 
     setInterval(loadPerformanceInfo, 1000);
+
 }
 
 function startDashboard() {

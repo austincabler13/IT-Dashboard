@@ -1,65 +1,52 @@
 # IT Dashboard
 
-IT Dashboard is my open-source IT hub that brings system monitoring, diagnostics, troubleshooting, and customization into one workspace. My goal is to create a community-driven IT Dashboard that expands normal Windows tools by combining IT utilities, advanced information, and community plugins into one dashboard.
+IT Dashboard is an open-source Windows desktop application that provides a centralized workspace for viewing system information, hardware details, storage information, performance monitoring, and future IT utilities.
 
-## Project Status
+## Current Features
 
-IT Dashboard is currently in the planning and early-development stage. Features, architecture, and documentation may change as the project develops.
+- System Information
+- Hardware Information
+- Performance Monitoring
+- Storage Information
+- Live CPU Usage
+- Live Memory Usage
+
+## Built With
+
+- Python
+- PyWebView
+- HTML
+- CSS
+- JavaScript
+- psutil
 
 ## Downloads
 
-The latest Windows build is available on the GitHub Releases page.
+The latest Windows build is available from the GitHub Releases page.
 
-> Note: v0.4.1 is an experimental Windows build.
+Download the latest release and extract the ZIP before running **IT Dashboard.exe**.
 
-## Screenshots
+## Demo
 
-![IT Dashboard v0.3.0](docs/images/image1.png)
+![IT Dashboard Demo](docs/media/dashboard-demo.gif)
 
-## Planned Areas
+## Roadmap
 
-- Dashboard
-- Hardware
-- Network
-- Services
-- Devices
-- Event logs
-- Storage
-- Tools
-- Users
+Planned features include:
+
+- Network Information
+- Service Manager
+- Process Manager
+- Device Information
+- Windows Tools
+- Plugin System
 - Settings
-- Plugins
-
-## Running the Project
-
-### Requirements
-
-- Windows
-- Python
-- PyWebView
-
-### Setup
-
-Install the required Python dependency:
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-Run the application from the repository root:
-
-```bash
-python src/backend/main.py
-```
-
-## Documentation
-
-Project planning and technical documentation will be stored in the [`docs`](docs/) directory.
+- Themes
 
 ## Contributing
 
-Contributions are welcome while IT Dashboard is in early development. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines and information.
+Contributions, feature requests, and bug reports are welcome.
 
 ## License
 
-IT Dashboard is licensed under the Apache License 2.0. See [LICENSE](LICENSE).
+This project is licensed under the MIT License.
