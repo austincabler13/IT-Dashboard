@@ -17,5 +17,5 @@ class API:
     def get_storage_info(self):
         return storage_info.get_storage_info(self)
 
-def get_network_info(self):
+    def get_network_info(self):
         return network_info.get_network_info(self)

@@ -33,17 +33,17 @@ def get_hardware_info(self):
             "total_memory": format_bytes(psutil.virtual_memory().total),
             "cpu_frequency": psutil.cpu_freq().max if psutil.cpu_freq() else None,
             "available_memory": format_bytes(psutil.virtual_memory().available) if psutil.virtual_memory() else None,
-            "Motherboard": {
+            "motherboard": {
                 "manufacturer": None,
                 "model": None,
                 "serial_number": None
             },
-            "BIOS": {
+            "bios": {
                 "manufacturer": None,
                 "version": None,
                 "release_date": None
             },
-            "GPU": {
+            "gpus": {
                 "name": None,
                 "manufacturer": None,
                 "driver_version": None,

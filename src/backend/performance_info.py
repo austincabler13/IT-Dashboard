@@ -1,4 +1,5 @@
-import psutil; from backend.utils.formatters import format_bytes, format_percent
+import psutil 
+from backend.utils.formatters import format_bytes, format_percent
 
 def get_performance_info(self):
         memory = psutil.virtual_memory()
