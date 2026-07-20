@@ -43,10 +43,12 @@ def get_hardware_info(self):
                 "version": None,
                 "release_date": None
             },
-            "gpus": {
+            "gpus": [
+                {
                 "name": None,
                 "manufacturer": None,
                 "driver_version": None,
                 "video_memory": None
-            }
+                }
+            ]
         }
