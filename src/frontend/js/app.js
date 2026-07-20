@@ -120,30 +120,96 @@ async function loadStorageInfo() {
     }
 }
 
+async function loadNetworkInfo() {
+    const messageElement = document.getElementById("status");
+    const networkContainer = document.getElementById("network_adapters");
+
+    try {
+        const networkInfo = await window.pywebview.api.get_network_info();
+
+        networkContainer.replaceChildren();
+
+        for (const adapter of networkInfo.adapters) {
+            const adapterElement = document.createElement("div");
+            adapterElement.className = "network-adapter";
+
+            const heading = document.createElement("h3");
+            heading.textContent = adapter.name;
+
+            const ipv4 = document.createElement("p");
+            ipv4.textContent = `IPv4: ${adapter.ipv4 ?? "not available"}`;
+
+            const ipv6 = document.createElement("p");
+            ipv6.textContent = `IPv6: ${adapter.ipv6 ?? "not available"}`;
+
+            const mac = document.createElement("p");
+            mac.textContent = `MAC: ${adapter.mac ?? "not available"}`;
+
+            const status = document.createElement("p");
+            status.textContent = `Status: ${adapter.is_up ? "Connected" : "Disconnected"}`;
+
+            const speed = document.createElement("p");
+            speed.textContent = `Speed: ${adapter.speed_mbps ?? "not available"} Mbps`;
+
+            adapterElement.append(
+                heading,
+                ipv4,
+                ipv6,
+                mac,
+                status,
+                speed
+            );
+
+            networkContainer.appendChild(adapterElement);
+        }
+    } catch (error) {
+        console.error("Unable to load network information:", error);
+        messageElement.textContent =
+            "Unable to load network information";
+
+        setTimeout(() => {
+            messageElement.textContent = "";
+        }, 3000);
+    }
+}
+
 async function loadInfo() {
     await loadSystemInfo();
     await loadHardwareInfo();
     await loadPerformanceInfo();
     await loadStorageInfo();
+    await loadNetworkInfo();
 
     setInterval(loadPerformanceInfo, 1000);
+    setInterval(loadNetworkInfo, 1000);
 
 }
 
-function showTab(tabId){
+function showPage(pageId, clickedButton) {
+    const pages = document.querySelectorAll(".page");
+    const buttons = document.querySelectorAll(".nav-button");
 
-    const tabs = document.querySelectorAll(".tab-content");
-
-    tabs.forEach(tab => {
-        tab.classList.remove("active");
+    pages.forEach(page => {
+        page.classList.remove("active");
     });
 
-    document.getElementById(tabId).classList.add("active");
+    buttons.forEach(button => {
+        button.classList.remove("active");
+    });
 
+    const selectedPage = document.getElementById(pageId);
+
+    if (selectedPage) {
+        selectedPage.classList.add("active");
+    }
+
+    if (clickedButton) {
+        clickedButton.classList.add("active");
+    }
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-    showTab("overview");
+    showPage("overview");
     startDashboard();
 });
 
