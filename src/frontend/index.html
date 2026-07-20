@@ -9,74 +9,6 @@
 <body>
     
     <h1>IT Dashboard</h1>
-    <section id="overview" class="tab-content"></section>
-    <div class="card">
-
-    <h2>System Overview</h2>
-    
-    <p>Operating System: <span id="os"></span></p>
-
-    <p>Computer Name: <span id="computer_name"></span></p>
-
-    <p>Bitness: <span id="bitness"></span></p>
-
-    <p>Architecture: <span id="architecture"></span></p>
-
-    <p>Python Version: <span id="python_version"></span></p>
-    </div>
-    <section>
-
-    <section id="hardware" class="tab-content">
-    <div class="card">
-
-    <h2>Hardware Information</h2>
-
-    <p>CPU Name: <span id="cpu_name"></span></p>
-
-    <p>Physical Cores: <span id="physical_cores"></span></p>
-
-    <p>Logical Processors: <span id="logical_processors"></span></p>
-
-    <p>Total Memory: <span id="total_memory"></span></p>
-    </div>
-    <section>
-
-    <section id="performance" class="tab-content">
-    <div class="card">
-
-        <h2>Performance Information</h2>
-    
-        <p>CPU Usage: <span id="cpu_percent"></span></p>
-    
-        <p>Memory Percent: <span id="memory_percent"></span></p>
-    
-        <p>Memory Used: <span id="memory_used"></span></p>
-    
-        <p>Memory Total: <span id="memory_total"></span></p>
-    
-        </div>
-    <section>
-
-    <section id="storage" class="tab-content">
-        <div class="card">
-
-        <h2>Storage Information</h2>
-
-        <div id="storage_drives"></div>       
-        
-    </div>
-    <section>
-
-    <section id="network" class="tab-content">
-
-    <div class="card">
-
-        <h2>Network Information</h2>
-
-        <p>Coming in v0.6.0...</p>
-
-    </div>
-    </section>
 
    <nav class="tabs">
     <button onclick="showTab('overview')">Overview</button>
@@ -85,6 +17,54 @@
     <button onclick="showTab('storage')">Storage</button>
     <button onclick="showTab('network')">Network</button>
     </nav>
+
+<section id="overview" class="tab-content">
+    <div class="card">
+        <h2>System Overview</h2>
+
+        <p>Operating System: <span id="os"></span></p>
+        <p>Computer Name: <span id="computer_name"></span></p>
+        <p>Bitness: <span id="bitness"></span></p>
+        <p>Architecture: <span id="architecture"></span></p>
+        <p>Python Version: <span id="python_version"></span></p>
+    </div>
+</section>
+
+<section id="hardware" class="tab-content">
+    <div class="card">
+        <h2>Hardware Information</h2>
+
+        <p>CPU Name: <span id="cpu_name"></span></p>
+        <p>Physical Cores: <span id="physical_cores"></span></p>
+        <p>Logical Processors: <span id="logical_processors"></span></p>
+        <p>Total Memory: <span id="total_memory"></span></p>
+    </div>
+</section>
+
+<section id="performance" class="tab-content">
+    <div class="card">
+        <h2>Performance Information</h2>
+
+        <p>CPU Usage: <span id="cpu_percent"></span></p>
+        <p>Memory Percent: <span id="memory_percent"></span></p>
+        <p>Memory Used: <span id="memory_used"></span></p>
+        <p>Memory Total: <span id="memory_total"></span></p>
+    </div>
+</section>
+
+<section id="storage" class="tab-content">
+    <div class="card">
+        <h2>Storage Information</h2>
+        <div id="storage_drives"></div>
+    </div>
+</section>
+
+<section id="network" class="tab-content">
+    <div class="card">
+        <h2>Network Information</h2>
+        <p>Coming in v0.6.0...</p>
+    </div>
+</section>
 
     <p id="status"></p>
 

@@ -3,19 +3,9 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 10px;
 }
-html{
-    overflow-y: scroll;
-}
 
 .tab-content{
     display:none;
-}
-
-.tab-content.active{
-    display:block;
-}
-
-.card {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -23,11 +13,15 @@ html{
     margin-bottom: 20px;
 }
 
-.card h2 {
+.tab-content.active{
+    display:block;
+}
+
+.tab-content h2 {
     margin-top: 0;
 }
 
-.card p {
+.tab-content p {
     margin: 5px 0;
 }
 

@@ -143,11 +143,8 @@ function showTab(tabId){
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-
     showTab("overview");
-
     startDashboard();
-
 });
 
 
@@ -160,5 +157,3 @@ function startDashboard() {
         }, { once: true });
     }
 }
-
-window.addEventListener("DOMContentLoaded", startDashboard);
