@@ -31,7 +31,7 @@ def get_hardware_info(self):
             "physical_cores": psutil.cpu_count(logical=False),
             "logical_processors": psutil.cpu_count(logical=True),
             "total_memory": format_bytes(psutil.virtual_memory().total),
-            "cpu_frequency": psutil.cpu_freq().max if psutil.cpu_freq() else None,
+            "cpu_frequency": round(psutil.cpu_freq().max, 2) if psutil.cpu_freq() else None,
             "available_memory": format_bytes(psutil.virtual_memory().available) if psutil.virtual_memory() else None,
             "motherboard": {
                 "manufacturer": None,

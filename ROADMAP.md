@@ -22,8 +22,8 @@ This roadmap outlines the current development direction for IT Dashboard. Items 
 
 - [x] Hardware information.
 - [x] Performance monitoring.
-- [ ] Network information.
-- [ ] Storage information.
+- [x] Network information.
+- [x] Storage information.
 - [ ] Services and event-log exploration.
 - [ ] Basic window navigation.
 - [ ] Establish automated testing practices.
