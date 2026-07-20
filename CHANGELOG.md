@@ -2,6 +2,13 @@
 
 All notable changes to IT Dashboard will be recorded in this file.
 
+## [0.7.0] - 2026-07-20
+
+- coming soon
+
+## [0.6.0] - 2026-07-20
+
+`Will change later`
 
 ## [0.5.0] - 2026-07-17
 
