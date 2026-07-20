@@ -15,6 +15,7 @@ echo Building IT Dashboard...
     --clean ^
     --name "IT Dashboard" ^
     --windowed ^
+    --icon "src/frontend/assets/icon.ico" ^
     --add-data "src/frontend;frontend" ^
     src/backend/main.py
 

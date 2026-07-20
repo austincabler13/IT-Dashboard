@@ -6,6 +6,15 @@ body {
 html{
     overflow-y: scroll;
 }
+
+.tab-content{
+    display:none;
+}
+
+.tab-content.active{
+    display:block;
+}
+
 .card {
     background-color: #ffffff;
     border-radius: 8px;

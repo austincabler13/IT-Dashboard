@@ -2,7 +2,7 @@ async function loadSystemInfo() {
     const messageElement = document.getElementById("status");
 
     try {
-        const systemInfo = await pywebview.api.get_system_info();
+        const systemInfo = await window.pywebview.api.get_system_info();
         document.getElementById("os").textContent = systemInfo.os;
         document.getElementById("computer_name").textContent = systemInfo.computer_name;
         document.getElementById("bitness").textContent = systemInfo.bitness;
@@ -26,7 +26,7 @@ async function loadHardwareInfo() {
     const messageElement = document.getElementById("status");
 
     try {
-        const hardwareInfo = await pywebview.api.get_hardware_info();
+        const hardwareInfo = await window.pywebview.api.get_hardware_info();
         document.getElementById("cpu_name").textContent = hardwareInfo.cpu_name;
         document.getElementById("physical_cores").textContent = hardwareInfo.physical_cores;
         document.getElementById("logical_processors").textContent = hardwareInfo.logical_processors;
@@ -129,6 +129,27 @@ async function loadInfo() {
     setInterval(loadPerformanceInfo, 1000);
 
 }
+
+function showTab(tabId){
+
+    const tabs = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(tab => {
+        tab.classList.remove("active");
+    });
+
+    document.getElementById(tabId).classList.add("active");
+
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    showTab("overview");
+
+    startDashboard();
+
+});
+
 
 function startDashboard() {
     if (window.pywebview && window.pywebview.api) {
