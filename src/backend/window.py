@@ -27,7 +27,7 @@ def create():
         js_api=api,
         url=str(index_file),
         width=800,
-        height=600
+        height=600,
     )
 
     webview.start(gui="edgechromium")
