@@ -2,14 +2,22 @@
 
 IT Dashboard is an open-source Windows desktop application that provides a centralized workspace for viewing system information, hardware details, storage information, performance monitoring, and future IT utilities.
 
+> IT Dashboard is currently in early development. Features and interfaces may change between releases.
+
+## Requirements
+
+- Windows 10 or Windows 11
+- WebView2 Runtime
+
 ## Current Features
 
-- System Information
-- Hardware Information
-- Performance Monitoring
-- Storage Information
-- Live CPU Usage
-- Live Memory Usage
+- Windows system overview
+- CPU and memory information
+- Live CPU and memory usage
+- Storage drive information
+- Network adapter information
+- IPv4, IPv6, MAC address, connection status, and link speed
+- Sidebar-based desktop interface
 
 ## Built With
 
@@ -34,7 +42,6 @@ Download the latest release and extract the ZIP before running **IT Dashboard.ex
 
 Planned features include:
 
-- Network Information
 - Service Manager
 - Process Manager
 - Device Information
